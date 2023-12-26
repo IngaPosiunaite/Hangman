@@ -1,8 +1,5 @@
 # Hangman
 
-## Project Status 
-
-This project is still in development **19/11/2023**
 
 # Introduction
 
@@ -12,5 +9,20 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 # Usage / Installation 
 
-Clone the repository by running the following command inside a terminal 
+Clone the repository by running the following command inside a terminal
 
+```
+git clone https://github.com/IngaPosiunaite/hangman864.git 
+```
+
+Then within the folder, run 
+
+```
+main.py
+```
+
+# Future Improvements 
+
+1. Addition to let players play the game again 
+2. Adding difficulty settings 
+3. Graphical User Interface
