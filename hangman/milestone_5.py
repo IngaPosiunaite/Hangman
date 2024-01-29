@@ -99,6 +99,7 @@ def play_game(word_list):
     while True:
         if game.num_lives == 0:
             print("You lost!")
+            break # Add break statement to exit the loop
         elif game.num_letters == 0:
             print("Congratulations. You won the game!")
             break # Add break statement to exit the loop
