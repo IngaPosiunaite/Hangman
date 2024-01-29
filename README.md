@@ -1,13 +1,13 @@
 # Hangman
 
 
-# Introduction
+## Introduction
 
 Hangman is a classic game in which a player thinks of a word and the other player tries to guess that word within a certain amount of attempts.
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
-# Usage / Installation 
+## Usage / Installation 
 
 Clone the repository by running the following command inside a terminal
 
@@ -21,7 +21,7 @@ Then within the folder, run
 main.py
 ```
 
-# File Structure 
+## File Structure 
 
 ```
 hangman864/
@@ -36,7 +36,7 @@ hangman864/
 └── README.md
 ```
 
-# Future Improvements 
+## Future Improvements 
 
 1. Addition to let players play the game again 
 2. Adding difficulty settings 
