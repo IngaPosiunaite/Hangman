@@ -35,16 +35,16 @@ class Hangman:
     ask_letter()
         Asks the user for a letter.
     '''
-def __init__(self, word_list, num_lives=5):
+    
+    def __init__(self, word_list, num_lives=5):
         self.word_list = word_list 
         self.num_lives = num_lives
         self.word = random.choice(word_list)
         self.word_guessed = ["_" for letter in self.word]
-        self.num_letters = int(len(set(self.word)))
+        self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
-
-def check_letter(self, letter) -> None:
+    def check_letter(self, letter) -> None:
         '''
         Checks if the letter is in the word.
         If it is, it replaces the '_' in the word_guessed list with the letter.
@@ -56,22 +56,27 @@ def check_letter(self, letter) -> None:
             The letter to be checked
 
         '''
+        # Convert the letter to lowercase for case-insensitive comparison
         letter = letter.lower()
+
         if letter in self.word:
-            print(f"Good guess! {letter} is in the word.") 
+            # Print a message indicating a correct guess
+            print(f"Good guess! {letter} is in the word.")
+            
+            # Iterate through each letter in the word
+            for index in range(len(self.word)):
+                if self.word[index] == letter:
+                    # Replace '_' with the guessed letter
+                    self.word_guessed[index] = letter
+                    # Decrease the count of unique letters to guess
+                    self.num_letters -= 1
         else:
-            print(f"Sorry, {letter} is not in the word. Try again")
-        for i in range(len(self.word)):
-            if self.word[i] == letter:
-                self.word_guessed[i] = letter
-                num_letters -=1
-            else:
-                num_lives -= 1 
-                print(f"Sorry, {letter} is not in the word.")
-                print(f"You have {num_lives} lives left.")
+            # Decrease the number of lives and provide feedback to the user
+            self.num_lives -= 1 
+            print(f"Sorry, {letter} is not in the word.")
+            print(f"You have {self.num_lives} lives left.")
 
-
-def ask_letter(self):
+    def ask_letter(self):
         '''
         Asks the user for a letter and checks two things:
         1. If the letter has already been tried
@@ -85,10 +90,9 @@ def ask_letter(self):
             elif letter in self.list_of_guesses:
                 print("You already tried that letter!")
             else: 
-               self.check_letter(letter) 
-               self.list_of_guesses.append(letter)
-               break
-   
+                self.check_letter(letter) 
+                self.list_of_guesses.append(letter)
+                break
 
 def play_game(word_list):
     game = Hangman(word_list, num_lives=5)
@@ -98,10 +102,10 @@ def play_game(word_list):
         elif game.num_letters == 0:
             print("Congratulations. You won the game!")
         else:
-            game.ask_for_input()
+            game.ask_letter()
 
 
 if __name__ == '__main__':
-    word_list = ['papaya', 'banana', 'apple', 'cherry', 'orange']
+    word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']
     play_game(word_list)
 # %%
