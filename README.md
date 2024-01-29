@@ -34,7 +34,6 @@ hangman864/
 ├── tests/
 │   └── test_hangman.py
 └── README.md
-
 ```
 
 # Future Improvements 
