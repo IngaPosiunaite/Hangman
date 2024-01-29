@@ -101,6 +101,7 @@ def play_game(word_list):
             print("You lost!")
         elif game.num_letters == 0:
             print("Congratulations. You won the game!")
+            break # Add break statement to exit the loop
         else:
             game.ask_letter()
 
