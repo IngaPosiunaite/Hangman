@@ -21,6 +21,22 @@ Then within the folder, run
 main.py
 ```
 
+# File Structure 
+
+```
+hangman864/
+│
+├── main.py
+├── hangman/
+│   ├── __init__.py
+│   ├── game.py
+│   └── utils.py
+├── tests/
+│   └── test_hangman.py
+└── README.md
+
+```
+
 # Future Improvements 
 
 1. Addition to let players play the game again 
