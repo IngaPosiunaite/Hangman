@@ -21,6 +21,12 @@ Then within the folder, run
 main.py
 ```
 
+## What I've Learned
+
+1. Built an implementation of the Hangman game in Python
+2. Handled errors in user input and built the conditional logic to run the game
+3. Utilized Object-Oriented Programming (OOP) principles, including encapsulation and abstraction
+
 ## File Structure 
 
 ```
