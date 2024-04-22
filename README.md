@@ -12,7 +12,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 Clone the repository by running the following command inside a terminal
 
 ```
-git clone https://github.com/IngaPosiunaite/hangman864.git 
+git clone https://github.com/IngaPosiunaite/hangman.git 
 ```
 
 Then within the folder, run 
@@ -30,7 +30,7 @@ main.py
 ## File Structure 
 
 ```
-hangman864/
+hangman/
 │
 ├── main.py
 ├── hangman/
